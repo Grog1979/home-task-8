@@ -5,3 +5,23 @@
 // 34(1,0,0) 41(1,1,0)
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
+
+void Index3d(int[,,] matrix)
+{
+  for (int x = 0; x < matrix.GetLength(0); x++)
+  {
+    for (int y = 0; y < matrix.GetLength(1); y++)
+    {
+      for (int z = 0; z < matrix.GetLength(2); z++)
+      {
+        Console.Write($"{matrix[x,y,z]}({x},{y},{z}) ");
+      }
+      Console.WriteLine();
+    }
+  }
+}
+
+int[,,] matrix3d = {
+  {{23,27},{45,17}},
+    {{94,56},{65,32}}};
+Index3d(matrix3d);
